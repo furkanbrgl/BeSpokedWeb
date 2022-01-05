@@ -7,6 +7,7 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
 import {RouterModule} from "@angular/router";
 import { CustomerPageComponent } from './customer-page/customer-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CustomerPageComponent } from './customer-page/customer-page.component';
     CustomerPageComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
