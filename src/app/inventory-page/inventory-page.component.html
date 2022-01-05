@@ -29,8 +29,8 @@
             <td>{{ product.stock }}</td>
             <td>{{ product.commission }}</td>
             <td>{{ product.active }}</td>
-            <td><button type="button" class="btn btn-secondary" click="editProduct(product)">Edit</button></td>
-            <td><button type="button" class="btn btn-secondary" click="deleteProduct(product)">Delete</button></td>
+            <td><button type="button" class="btn btn-secondary" (click)="editProduct(product)">Edit</button></td>
+            <td><button type="button" class="btn btn-secondary" (click)="deleteProduct(product)">Delete</button></td>
           </tr>
           </tbody>
         </table>
