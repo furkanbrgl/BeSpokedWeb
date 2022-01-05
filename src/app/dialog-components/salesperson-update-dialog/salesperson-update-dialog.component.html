@@ -1,0 +1,53 @@
+<h1 mat-dialog-title>Salesperson Update</h1>
+<div mat-dialog-content style="display: grid;">
+  <mat-form-field>
+
+
+    <div class="col-md-12" style="text-align: left">
+      <label style="margin-top: 15px; margin-bottom: 15px">First Name: </label>
+      <input style="border: 1px solid #000;width: 100%;padding: 9px;font-size: 15px;" matInput matNativeControl [(ngModel)]="data.firstName" type="text">
+    </div>
+
+    <div class="col-md-12" style="text-align: left">
+      <label style="margin-top: 15px; margin-bottom: 15px">Last Name: </label>
+      <input style="border: 1px solid #000;width: 100%;padding: 9px;font-size: 15px;" matInput matNativeControl [(ngModel)]="data.lastName" type="text">
+    </div>
+
+    <div class="col-md-12" style="text-align: left">
+      <label style="margin-top: 15px; margin-bottom: 15px">Address : </label>
+      <input style="border: 1px solid #000;width: 100%;padding: 9px;font-size: 15px;" matInput matNativeControl [(ngModel)]="data.address" type="text">
+    </div>
+
+    <div class="col-md-12" style="text-align: left">
+      <label style="margin-top: 15px; margin-bottom: 15px">Phone Number: </label>
+      <input style="border: 1px solid #000;width: 100%;padding: 9px;font-size: 15px;" matInput matNativeControl [(ngModel)]="data.phoneNumber" type="text">
+    </div>
+
+    <div class="col-md-12" style="text-align: left">
+      <label style="margin-top: 15px; margin-bottom: 15px">Start Date: </label>
+      <input style="border: 1px solid #000;width: 100%;padding: 9px;font-size: 15px;" matInput matNativeControl [(ngModel)]="data.startDate" type="text">
+    </div>
+
+    <div class="col-md-12" style="text-align: left">
+      <label style="margin-top: 15px; margin-bottom: 15px">Termination Date: </label>
+      <input style="border: 1px solid #000;width: 100%;padding: 9px;font-size: 15px;" matInput matNativeControl [(ngModel)]="data.terminationDate" type="text">
+    </div>
+
+    <div class="col-md-12" style="text-align: left">
+      <label style="margin-top: 15px; margin-bottom: 15px">Manager: </label>
+      <input style="border: 1px solid #000;width: 100%;padding: 9px;font-size: 15px;" matInput matNativeControl [(ngModel)]="data.manager" type="text">
+    </div>
+    <div class="col-md-12" style="text-align: left">
+      <label style="margin-top: 15px; margin-bottom: 15px">isActive: </label>
+      <input style="border: 1px solid #000;width: 100%;padding: 9px;font-size: 15px;" matInput matNativeControl [(ngModel)]="data.isActive" type="text">
+    </div>
+
+
+
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Update</button>
+</div>

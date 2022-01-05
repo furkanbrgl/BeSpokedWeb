@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "firstName": "Shaen_0",
+    "lastName": "Jackson_0",
+    "address": "Midtown",
+    "phoneNumber": 6191132222,
+    "startDate": 1519211809934,
+    "terminationDate": 1519211809934,
+    "manager": "Grey",
+    "active": true
+  },
+  {
+    "id": 2,
+    "firstName": "Shaen_1",
+    "lastName": "Jackson_1",
+    "address": "Marietta",
+    "phoneNumber": 6191132222,
+    "startDate": 1519211809934,
+    "terminationDate": 1519211809934,
+    "manager": "Blue",
+    "active": true
+  },
+  {
+    "id": 3,
+    "firstName": "Shaen_2",
+    "lastName": "Jackson_2",
+    "address": "Norcross",
+    "phoneNumber": 6191132222,
+    "startDate": 1519211809934,
+    "terminationDate": 1519211809934,
+    "manager": "Black",
+    "active": true
+  }
+]

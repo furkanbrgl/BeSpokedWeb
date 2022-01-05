@@ -15,6 +15,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatInputModule} from "@angular/material/input";
+import { SalespersonsPageComponent } from './salespersons-page/salespersons-page.component';
+import { SalespersonUpdateDialogComponent } from './dialog-components/salesperson-update-dialog/salesperson-update-dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {MatInputModule} from "@angular/material/input";
     AppHeaderComponent,
     InventoryPageComponent,
     CustomerPageComponent,
-    ProductUpdateDialogComponent
+    ProductUpdateDialogComponent,
+    SalespersonsPageComponent,
+    SalespersonUpdateDialogComponent
   ],
   imports: [
     HttpClientModule,
@@ -47,6 +51,10 @@ import {MatInputModule} from "@angular/material/input";
       {
         path: 'customers',
         component: CustomerPageComponent
+      },
+      {
+        path: 'salespersons',
+        component: SalespersonsPageComponent
       }])
   ],
   providers: [],
