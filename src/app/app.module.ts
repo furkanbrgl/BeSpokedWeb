@@ -3,14 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppHeaderComponent } from './app-header/app-header.component';
+import { InventoryPageComponent } from './inventory-page/inventory-page.component';
+import {RouterModule} from "@angular/router";
+import { CustomerPageComponent } from './customer-page/customer-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppHeaderComponent,
+    InventoryPageComponent,
+    CustomerPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path: '', pathMatch: 'full', redirectTo: 'home'},
+      {
+        path: 'inventory',
+        component: InventoryPageComponent
+      },
+      {
+        path: 'customers',
+        component: CustomerPageComponent
+      }])
   ],
   providers: [],
   bootstrap: [AppComponent]

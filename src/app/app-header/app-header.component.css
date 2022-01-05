@@ -1,0 +1,135 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@fontsource/kaushan-script';
+
+
+a:hover {
+  color: #444;
+}
+a,
+a:hover,
+a:focus,
+a:active{
+  outline: 0;
+  text-decoration: none;
+}
+
+.top-bar {
+  background-color: #fff;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+
+.top-bar a {
+  color: #aaa;
+}
+
+.top-bar .contact-details {
+  border-left: 1px solid #f2f2f2;
+  padding-top: 8px;
+}
+.top-bar .contact-details li {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 18px;
+  line-height: 32px;
+  border-left: 1px solid #f2f2f2;
+}
+
+.top-bar .contact-details li:last-child {
+  border-right: 1px solid #f2f2f2;
+}
+
+.top-bar .contact-details li a:before {
+  color: #aaa;
+}
+
+.top-bar .contact-details li:first-child a:before {
+  display: none;
+}
+
+.top-bar .contact-details li a {
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: block;
+  line-height: 32px;
+}
+
+
+@-webkit-keyframes toRightFromLeft {
+  49% {
+    -webkit-transform: translate(40%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-40%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes toRightFromLeft {
+  49% {
+    -moz-transform: translate(40%);
+  }
+  50% {
+    opacity: 0;
+    -moz-transform: translate(-40%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@keyframes toRightFromLeft {
+  49% {
+    transform: translate(40%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-40%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+
+
+/* ----------------------------------------------------------------*/
+/* Start Navigation Section */
+/* ----------------------------------------------------------------*/
+
+
+a.navbar-brand {
+  font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-left: 30px;
+  color: #ff432e !important;
+}
+.navbar-nav{
+  flex-direction: inherit !important;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #6b6b6b;
+  display: block;
+  font-size: 16px;
+  line-height: 10px;
+  font-weight: 500;
+  padding: 25px 15px 30px;
+  overflow: hidden;
+  border-top: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+
+.navbar-default .navbar-nav > li:hover > a {
+  border-top: 2px solid #FF432E;
+  color: #fff;
+  background: #FF432E;
+  padding: 25px 15px 30px;
+}
+
+
+
