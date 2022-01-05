@@ -1,0 +1,72 @@
+[
+  {
+    "customerId": 1,
+    "firstName": "Joe_0",
+    "lastName": "Jackson_0",
+    "phoneNumber": 6191132222,
+    "registered": 1519211809934
+  },
+  {
+    "customerId": 2,
+    "firstName": "Joe_1",
+    "lastName": "Jackson_1",
+    "phoneNumber": 6191132222,
+    "registered": 1519211809934
+  },
+  {
+    "customerId": 3,
+    "firstName": "Joe_2",
+    "lastName": "Jackson_2",
+    "phoneNumber": 6191132222,
+    "registered": 1519211809934
+  },
+  {
+    "customerId": 4,
+    "firstName": "Joe_3",
+    "lastName": "Jackson_3",
+    "phoneNumber": 6191132222,
+    "registered": 1519211809934
+  },
+  {
+    "customerId": 5,
+    "firstName": "Joe_4",
+    "lastName": "Jackson_4",
+    "phoneNumber": 6191132222,
+    "registered": 1519211809934
+  },
+  {
+    "customerId": 6,
+    "firstName": "Joe_5",
+    "lastName": "Jackson_5",
+    "phoneNumber": 6191132222,
+    "registered": 1519211809934
+  },
+  {
+    "customerId": 7,
+    "firstName": "Joe_6",
+    "lastName": "Jackson_6",
+    "phoneNumber": 6191132222,
+    "registered": 1519211809934
+  },
+  {
+    "customerId": 8,
+    "firstName": "Joe_7",
+    "lastName": "Jackson_7",
+    "phoneNumber": 6191132222,
+    "registered": 1519211809934
+  },
+  {
+    "customerId": 9,
+    "firstName": "Joe_8",
+    "lastName": "Jackson_8",
+    "phoneNumber": 6191132222,
+    "registered": 1519211809934
+  },
+  {
+    "customerId": 10,
+    "firstName": "Joe_9",
+    "lastName": "Jackson_9",
+    "phoneNumber": 6191132222,
+    "registered": 1519211809934
+  }
+]

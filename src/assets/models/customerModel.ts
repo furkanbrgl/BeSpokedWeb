@@ -1,8 +1,10 @@
-import {EventModel} from "./eventModel";
 
-export class EventModelDTO {
+export class CustomerModel {
 
-  // @ts-ignore
-  events: Array<EventModel>;
+  customerId?:number;
+  firstName?:string = "";
+  lastName?:string = "";
+  phoneNumber?:string = "";
+  registered?:string = "";
 
 }
