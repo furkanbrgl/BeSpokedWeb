@@ -20,7 +20,7 @@ export class SalespersonService {
   getSalesPersons(complete = () => {
   }): Observable<any> {
 
-    let requestURL = "assets/salespersons.json"
+    let requestURL = "http://localhost:8080/salespersons/"
     return this.http.get<SalespersonModel>(requestURL, httpOptions)
       .pipe(
         map((data: any) => {

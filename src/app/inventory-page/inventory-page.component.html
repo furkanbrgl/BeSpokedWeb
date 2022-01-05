@@ -15,12 +15,13 @@
             <th>Stock</th>
             <th>Commission</th>
             <th>IsActive</th>
+            <th>Deal Codes</th>
 
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let product of productList">
-            <td>{{ product.productId }}</td>
+            <td>{{ product.id }}</td>
             <td>{{ product.manufacturer }}</td>
             <td>{{ product.name }}</td>
             <td>{{ product.style }}</td>
@@ -29,6 +30,9 @@
             <td>{{ product.stock }}</td>
             <td>{{ product.commission }}</td>
             <td>{{ product.active }}</td>
+            <td>
+              <div *ngFor="let deal of product.discounts">{{deal.dealCode}}</div>
+            </td>
             <td><button type="button" class="btn btn-secondary" (click)="editProduct(product)">Edit</button></td>
             <td><button type="button" class="btn btn-secondary" (click)="deleteProduct(product)">Delete</button></td>
           </tr>

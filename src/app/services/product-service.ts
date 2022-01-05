@@ -19,7 +19,7 @@ export class ProductService {
   getProducts(complete = () => {
   }): Observable<any> {
 
-    let requestURL = "assets/products.json"
+    let requestURL = "http://localhost:8080/inventory/all"
     return this.http.get<ItemModel>(requestURL, httpOptions)
       .pipe(
         map((data: any) => {

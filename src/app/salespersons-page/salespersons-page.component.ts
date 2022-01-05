@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {ProductService} from "../services/product-service";
+import {Component, OnInit} from '@angular/core';
 import {SalespersonService} from "../services/salesperson-service";
 import {MatDialog} from "@angular/material/dialog";
 import {NotificationService} from "../services/notification/notification.service";
-import {ProductUpdateDialogComponent} from "../dialog-components/product-update-dialog/product-update-dialog.component";
 import {SalespersonUpdateDialogComponent} from "../dialog-components/salesperson-update-dialog/salesperson-update-dialog.component";
 
 @Component({
