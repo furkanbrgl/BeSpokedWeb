@@ -1,46 +1,79 @@
-[{
-  "productId": 1,
-  "manufacturer": "pillow",
-  "style": "traditional",
-  "purchasePrice": 22,
-  "salePrice": 33,
-  "stock": 40,
-  "commission": 2
-},
+[
+  {
+    "productId": 1,
+    "manufacturer": "Profisee",
+    "name": "pillow",
+    "style": "modern",
+    "purchasePrice": 22,
+    "salePrice": 33,
+    "stock": 40,
+    "commission": 2,
+    "active": true
+  },
   {
     "productId": 2,
-    "manufacturer": "mirror",
-    "style": "traditional",
+    "manufacturer": "Profisee",
+    "name": "rug",
+    "style": "bohemian",
     "purchasePrice": 12,
     "salePrice": 34,
     "stock": 40,
-    "commission": 2
+    "commission": 2,
+    "active": true
   },
   {
     "productId": 3,
-    "manufacturer": "rug",
+    "manufacturer": "Profisee",
+    "name": "runner",
     "style": "traditional",
     "purchasePrice": 52,
     "salePrice": 63,
     "stock": 40,
-    "commission": 4
+    "commission": 4,
+    "active": true
   },
   {
     "productId": 4,
-    "manufacturer": "runner",
+    "manufacturer": "Profisee",
+    "name": "mirror",
     "style": "traditional",
     "purchasePrice": 32,
     "salePrice": 33,
     "stock": 40,
-    "commission": 3
+    "commission": 3,
+    "active": true
   },
   {
     "productId": 5,
-    "manufacturer": "curtain",
+    "manufacturer": "Profisee",
+    "name": "curtain",
     "style": "traditional",
     "purchasePrice": 52,
     "salePrice": 73,
     "stock": 40,
-    "commission": 5
+    "commission": 5,
+    "active": true
+  },
+  {
+    "productId": 6,
+    "manufacturer": "Profisee",
+    "name": "doormat",
+    "style": "bohemian",
+    "purchasePrice": 7,
+    "salePrice": 13,
+    "stock": 20,
+    "commission": 1,
+    "active": true
+  },
+  {
+    "productId": 7,
+    "manufacturer": "Profisee",
+    "name": "lamp",
+    "style": "modern",
+    "purchasePrice": 22,
+    "salePrice": 43,
+    "stock": 20,
+    "commission": 5,
+    "active": true
   }
 ]

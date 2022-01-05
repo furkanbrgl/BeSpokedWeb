@@ -2,7 +2,38 @@
   <div class="overlay">
     <div class="intro-text" style="padding: 3%">
       <div class="container">
-        <p>inventory-page works!</p>
+        <h1><span class="kausan">Products </span></h1>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Manufacturer</th>
+            <th>Product Name</th>
+            <th>Style</th>
+            <th>Purchase Price</th>
+            <th>Sale Price</th>
+            <th>Stock</th>
+            <th>Commission</th>
+            <th>IsActive</th>
+
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let product of productList">
+            <td>{{ product.productId }}</td>
+            <td>{{ product.manufacturer }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.style }}</td>
+            <td>{{ product.purchasePrice }}</td>
+            <td>{{ product.salePrice }}</td>
+            <td>{{ product.stock }}</td>
+            <td>{{ product.commission }}</td>
+            <td>{{ product.active }}</td>
+            <td><button type="button" class="btn btn-secondary" click="editProduct(product)">Edit</button></td>
+            <td><button type="button" class="btn btn-secondary" click="deleteProduct(product)">Delete</button></td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

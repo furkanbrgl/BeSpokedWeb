@@ -6,5 +6,6 @@ export class CustomerModel {
   lastName?:string = "";
   phoneNumber?:string = "";
   registered?:string = "";
+  active?:boolean;
 
 }
