@@ -9,7 +9,7 @@ import {RouterModule} from "@angular/router";
 import {CustomerPageComponent} from './customer-page/customer-page.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ProductUpdateDialogComponent } from './dialog-components/product-update-dialog/product-update-dialog.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {ToastrModule} from "ngx-toastr";
@@ -17,6 +17,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatInputModule} from "@angular/material/input";
 import { SalespersonsPageComponent } from './salespersons-page/salespersons-page.component';
 import { SalespersonUpdateDialogComponent } from './dialog-components/salesperson-update-dialog/salesperson-update-dialog.component';
+import { SalePageComponent } from './sale-page/sale-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SalespersonUpdateDialogComponent } from './dialog-components/salesperso
     CustomerPageComponent,
     ProductUpdateDialogComponent,
     SalespersonsPageComponent,
-    SalespersonUpdateDialogComponent
+    SalespersonUpdateDialogComponent,
+    SalePageComponent
   ],
   imports: [
     HttpClientModule,
@@ -37,6 +39,7 @@ import { SalespersonUpdateDialogComponent } from './dialog-components/salesperso
     MatInputModule,
     MatFormFieldModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot({
       timeOut: 10000,
       positionClass: 'toast-bottom-right',
@@ -55,6 +58,10 @@ import { SalespersonUpdateDialogComponent } from './dialog-components/salesperso
       {
         path: 'salespersons',
         component: SalespersonsPageComponent
+      },
+      {
+        path: 'home',
+        component: SalePageComponent
       }])
   ],
   providers: [],

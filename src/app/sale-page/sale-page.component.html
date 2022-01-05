@@ -1,0 +1,89 @@
+<div class="banner">
+  <div class="overlay">
+    <div class="intro-text" style="padding: 3%">
+      <div class="container">
+        <h1><span class="kausan">Create A Sale ! </span></h1>
+
+        <form [formGroup]="createSaleForm" (ngSubmit)="onSubmit(createSaleForm.value)">
+          <h3 style="color: black;text-align: left">Customers Info</h3><hr style="color: red; height: 4px!important;" class="solid">
+          <div class="row">
+            <div class="col-6" style="text-align: left">
+              <div class="form-group">
+                <label for="customername" style="color: black;font-weight: bold">Name</label>
+                <input type="text" class="form-control" id="customername" formControlName="customername"/>
+              </div>
+            </div>
+            <div class="col-6" style="text-align: left">
+              <div class="form-group">
+                <label for="lastname" style="color: black;font-weight: bold">Last Name</label>
+                <input type="text" class="form-control" id="lastname" formControlName="lastname"/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6" style="text-align: left">
+              <div class="form-group">
+                <label for="address" style="color: black;font-weight: bold">Address</label>
+                <input type="text" class="form-control" id="address" formControlName="address"/>
+              </div>
+            </div>
+            <div class="col-6" style="text-align: left">
+              <div class="form-group">
+                <label for="phonenumber" style="color: black;font-weight: bold">Phone Number</label>
+                <input type="text" class="form-control" id="phonenumber" formControlName="phonenumber"/>
+              </div>
+            </div>
+          </div><br>
+          <h3 style="color: black;text-align: left">Purchase Detail</h3><hr style="color: red; height: 4px!important;" class="solid"><br>
+
+          <div class="row">
+            <div class="col-6" style="text-align: left">
+              <div class="form-group">
+                <label for="customername" style="color: black;font-weight: bold">Items</label>
+                <select formControlName="productDetail" class="form-control" >
+                  <option *ngFor="let product of productList">{{product.name}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-6" style="text-align: left">
+              <div class="form-group">
+                <label for="lastname" style="color: black;font-weight: bold">Sales Person</label>
+                <select formControlName="salesperson" class="form-control">
+                  <option *ngFor="let salesperson of salespersonsList">{{salesperson.firstName}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-6" style="text-align: left">
+              <div class="form-group">
+                <label style="color: black;font-weight: bold">Special Discount</label>
+                <select formControlName="specialDiscount" class="form-control" >
+                  <option *ngFor="let deal of specialDiscountList">{{deal.dealCode}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <br>
+          <hr style="color: red; height: 4px!important;" class="solid">
+
+          <div class="row">
+            <div class="col-6" style="text-align: left">
+              <div class="form-group">
+                <label for="customername" style="color: black;font-weight: bold;font-size: x-large">{{total}}</label>
+              </div>
+            </div>
+            <div class="col-6" style="text-align: left">
+              <div class="form-group">
+                <button class="btn btn-secondary" type="submit">Sale !</button>
+              </div>
+            </div>
+          </div>
+          <br>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
