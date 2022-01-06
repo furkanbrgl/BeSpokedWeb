@@ -60,8 +60,8 @@ export class SalePageComponent implements OnInit {
       console.log(data);
       this.notifyService.showSuccess("Product Updated", "")
     })
-    console.log(this.saleModel);
     this.createSaleForm.reset();
+    this.total = "0";
   }
 
   onChangeProduct(event: any) {

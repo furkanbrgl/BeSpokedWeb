@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {ProductService} from "../services/product-service";
+import {Component, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {NotificationService} from "../services/notification/notification.service";
 import {DashboardService} from "../services/dashboard-service";
@@ -13,13 +12,13 @@ export class DashboardPageComponent implements OnInit {
 
   sales: any;
 
-  constructor(private dashboardService: DashboardService, public dialog: MatDialog, private notifyService: NotificationService) { }
+  constructor(private dashboardService: DashboardService, public dialog: MatDialog, private notifyService: NotificationService) {
+  }
 
   ngOnInit(): void {
 
-    this.dashboardService.getAllSales().subscribe(data=> {
-      console.log(data);
-      this.sales= data;
+    this.dashboardService.getAllSales().subscribe(data => {
+      this.sales = data;
     })
 
   }
