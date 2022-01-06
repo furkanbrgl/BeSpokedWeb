@@ -18,6 +18,7 @@ import {MatInputModule} from "@angular/material/input";
 import { SalespersonsPageComponent } from './salespersons-page/salespersons-page.component';
 import { SalespersonUpdateDialogComponent } from './dialog-components/salesperson-update-dialog/salesperson-update-dialog.component';
 import { SalePageComponent } from './sale-page/sale-page.component';
+import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SalePageComponent } from './sale-page/sale-page.component';
     ProductUpdateDialogComponent,
     SalespersonsPageComponent,
     SalespersonUpdateDialogComponent,
-    SalePageComponent
+    SalePageComponent,
+    DashboardPageComponent
   ],
   imports: [
     HttpClientModule,
@@ -62,6 +64,10 @@ import { SalePageComponent } from './sale-page/sale-page.component';
       {
         path: 'home',
         component: SalePageComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardPageComponent
       }])
   ],
   providers: [],
