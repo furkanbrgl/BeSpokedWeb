@@ -4,16 +4,13 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {CustomerModel} from "../../assets/models/customerModel";
 import {SalesDTO} from "../../assets/models/salesDTO";
+import {SaleModel} from "../../assets/models/saleModel";
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Credentials': 'true',
-    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+    'Content-Type': 'application/json'
   })
-};
+}
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +31,17 @@ export class DashboardService {
           sales = data;
           return sales;
         }));
+  }
+
+  makeASale(makeASaleObject: SaleModel, complete = () => {
+  }): Observable<any> {
+
+    return this.http.post<any>("http://localhost:8080/sales/make", JSON.stringify(makeASaleObject), httpOptions)
+      .pipe(
+        map((data: any) => {
+          return data;
+        })
+      );
   }
 
 }

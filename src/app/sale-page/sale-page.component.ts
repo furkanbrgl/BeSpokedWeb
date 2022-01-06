@@ -3,6 +3,9 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ProductService} from "../services/product-service";
 import {SalespersonService} from "../services/salesperson-service";
 import {SpecialDiscountService} from "../services/special-discount-service";
+import {DashboardService} from "../services/dashboard-service";
+import {SaleModel} from "../../assets/models/saleModel";
+import {CustomerModel} from "../../assets/models/customerModel";
 
 @Component({
   selector: 'app-sale-page',
@@ -16,10 +19,12 @@ export class SalePageComponent implements OnInit {
   chosenProduct: any;
   salespersonsList: any = [];
   specialDiscountList: any = [];
-  total: any = "$0";
+  total: any = "0";
 
+  saleModel: SaleModel = new SaleModel();
 
-  constructor(private formBuilder: FormBuilder,private productService: ProductService,private specialDiscountService: SpecialDiscountService, private salespersonService: SalespersonService) { }
+  constructor(private formBuilder: FormBuilder,  private dashboardService: DashboardService, private productService: ProductService, private specialDiscountService: SpecialDiscountService, private salespersonService: SalespersonService) {
+  }
 
   ngOnInit(): void {
     this.createSaleForm = this.formBuilder.group({
@@ -32,28 +37,46 @@ export class SalePageComponent implements OnInit {
       specialDiscount: ['', Validators.required]
     });
 
-    this.productService.getProducts().subscribe(data=> {
-      console.log(data);
-      this.productList= data;
+    this.productService.getProducts().subscribe(data => {
+      this.productList = data;
     })
-    this.salespersonService.getSalesPersons().subscribe(data=> {
-      console.log(data);
-      this.salespersonsList= data;
+    this.salespersonService.getSalesPersons().subscribe(data => {
+      this.salespersonsList = data;
     })
-    this.specialDiscountService.getSpecialDiscounts().subscribe(data=> {
-      console.log(data);
-      this.specialDiscountList= data.specialDeal;
-    })
-
-
   }
 
-  onSubmit(formData:any) {
-  console.log(formData)
+  onSubmit(formData: any) {
+    console.log(formData)
+    let c = new CustomerModel();
+//  c.customerId
+    c.firstName = formData.customername;c.lastName = formData.lastname;c.phoneNumber = formData.phonenumber;
+//    c.registered = null;
+    c.active = true;this.saleModel.customer = c;
+    // @ts-ignore
+    this.saleModel.product.discounts=undefined;
+
+    this.dashboardService.makeASale(this.saleModel).subscribe(data => {
+      console.log(data);
+    })
+    console.log(this.saleModel);
   }
 
-  onChange(event:any){
-
+  onChangeProduct(event: any) {
+    for (let i = 0; i < this.productList.length; i++) {
+      if (event.target.value == this.productList[i].name) {
+        this.specialDiscountList = this.productList[i].discounts;
+        this.total = this.productList[i].salePrice;
+        this.saleModel.product = this.productList[i];
+      }
+    }
   }
-
+  onChangeSalesperson(event: any) {
+    for (let i = 0; i < this.salespersonsList.length; i++) {
+      if (event.target.value == this.salespersonsList[i].firstName) {
+        this.saleModel.salesperson = this.salespersonsList[i];
+        this.saleModel.salesperson.startDate = undefined;
+        this.saleModel.salesperson.terminationDate = undefined;
+      }
+    }
+  }
 }

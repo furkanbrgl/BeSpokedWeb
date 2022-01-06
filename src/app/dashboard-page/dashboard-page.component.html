@@ -1,1 +1,38 @@
-<p>dashboard-page works!</p>
+<div class="banner">
+  <div class="overlay">
+    <div class="intro-text" style="padding: 3%">
+      <div class="container">
+        <h1><span class="kausan">Sales List </span></h1>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Purchase Date</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Customer Name</th>
+            <th>Customer Last Name</th>
+            <th>Salesperson Name</th>
+            <th>Salesperson Last Name</th>
+            <th>Salesperson Commission</th>
+
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let sale of sales">
+            <td>{{ sale.id }}</td>
+            <td>{{ sale.transactionDate }}</td>
+            <td>{{ sale.product.name }}</td>
+            <td>${{ sale.product.salePrice }}</td>
+            <td>{{ sale.customer.firstName }}</td>
+            <td>{{ sale.customer.lastName }}</td>
+            <td>{{ sale.salesperson.firstName }}</td>
+            <td>{{ sale.salesperson.lastName }}</td>
+            <td>{{ sale.product.commission }}</td>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
