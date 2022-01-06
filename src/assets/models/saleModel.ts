@@ -3,16 +3,15 @@ import {SalespersonModel} from "./salespersonModel";
 import {ItemModel} from "./itemModel";
 import {CustomerModel} from "./customerModel";
 
-export class SalesModel {
+export class SaleModel {
 
   id?:number;
-  transactionDate?:string = "";
+  transactionDate?:string;
   // @ts-ignore
   salesperson: SalespersonModel;
   // @ts-ignore
   product: ItemModel;
   // @ts-ignore
   customer: CustomerModel;
-
 
 }

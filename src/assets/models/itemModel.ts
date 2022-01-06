@@ -1,7 +1,8 @@
+import {SpecialDiscount} from "./specialDiscount";
 
 export class ItemModel {
 
-  productId?:number;
+  id?:number;
   manufacturer?:string = "";
   name?:string = "";
   style?:string = "";
@@ -10,5 +11,7 @@ export class ItemModel {
   stock?:number;
   commission?:number;
   active?:boolean;
+  // @ts-ignore
+  discounts: Array<SpecialDiscount>;
 
 }

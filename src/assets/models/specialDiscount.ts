@@ -1,14 +1,11 @@
 
-export class ItemModel {
+export class SpecialDiscount {
 
-  productId?:number;
-  manufacturer?:string = "";
-  name?:string = "";
-  style?:string = "";
-  purchasePrice?:number;
-  salePrice?:number;
-  stock?:number;
-  commission?:number;
+  id?:number;
+  dealCode?:number;
+  Discount?:number;
+  begin?:number;
+  end?:number;
   active?:boolean;
 
 }
