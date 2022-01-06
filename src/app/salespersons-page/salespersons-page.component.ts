@@ -3,6 +3,8 @@ import {SalespersonService} from "../services/salesperson-service";
 import {MatDialog} from "@angular/material/dialog";
 import {NotificationService} from "../services/notification/notification.service";
 import {SalespersonUpdateDialogComponent} from "../dialog-components/salesperson-update-dialog/salesperson-update-dialog.component";
+import {SalespersonReportDialogComponent} from "../dialog-components/salesperson-report-dialog/salesperson-report-dialog.component";
+import {DashboardService} from "../services/dashboard-service";
 
 @Component({
   selector: 'app-salespersons-page',
@@ -12,8 +14,9 @@ import {SalespersonUpdateDialogComponent} from "../dialog-components/salesperson
 export class SalespersonsPageComponent implements OnInit {
 
   salespersonsList: any = [];
+  salesForSalesman: any = [];
 
-  constructor(private salespersonService: SalespersonService, public dialog: MatDialog, private notifyService: NotificationService) { }
+  constructor(private salespersonService: SalespersonService,private dashboardService: DashboardService, public dialog: MatDialog, private notifyService: NotificationService) { }
 
   ngOnInit(): void {
 
@@ -83,6 +86,28 @@ export class SalespersonsPageComponent implements OnInit {
         break;
       }
     }
+
+  }
+
+  reportSalesperson(element:any) {
+
+    this.dashboardService.getSalesBySalesmanId(element.id).subscribe(data=> {
+      this.salesForSalesman= data;
+
+      let dialogRef = this.dialog.open(SalespersonReportDialogComponent, {
+        width: '650px',
+        disableClose: true,
+        data: {
+          salespersonSales: this.salesForSalesman
+        }
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+
+
+      });
+
+    })
 
   }
 

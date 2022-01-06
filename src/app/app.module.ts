@@ -19,6 +19,7 @@ import { SalespersonsPageComponent } from './salespersons-page/salespersons-page
 import { SalespersonUpdateDialogComponent } from './dialog-components/salesperson-update-dialog/salesperson-update-dialog.component';
 import { SalePageComponent } from './sale-page/sale-page.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
+import { SalespersonReportDialogComponent } from './dialog-components/salesperson-report-dialog/salesperson-report-dialog.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
     SalespersonsPageComponent,
     SalespersonUpdateDialogComponent,
     SalePageComponent,
-    DashboardPageComponent
+    DashboardPageComponent,
+    SalespersonReportDialogComponent
   ],
   imports: [
     HttpClientModule,

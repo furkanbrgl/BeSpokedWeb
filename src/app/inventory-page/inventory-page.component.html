@@ -28,7 +28,7 @@
             <td>${{ product.purchasePrice }}</td>
             <td>${{ product.salePrice }}</td>
             <td>{{ product.stock }}</td>
-            <td>{{ product.commission }}</td>
+            <td>%{{ product.commission }}</td>
             <td>{{ product.active }}</td>
             <td>
               <div *ngFor="let deal of product.discounts">{{deal.dealCode}}</div>

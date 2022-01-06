@@ -29,6 +29,7 @@
             <td>{{ salesman.terminationDate }}</td>
             <td>{{ salesman.manager }}</td>
             <td>{{ salesman.active }}</td>
+            <td><button type="button" class="btn btn-secondary" (click)="reportSalesperson(salesman)">Report</button></td>
             <td><button type="button" class="btn btn-secondary" (click)="editSalesperson(salesman)">Edit</button></td>
             <td><button type="button" class="btn btn-secondary" (click)="deleteSalesperson(salesman)">Delete</button></td>
           </tr>

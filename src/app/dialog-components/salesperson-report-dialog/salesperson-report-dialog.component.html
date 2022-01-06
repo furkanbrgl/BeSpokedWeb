@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Salesperson Report</h1>
+<div mat-dialog-content style="display: grid;">
+
+  <mat-form-field>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Sale Id</th>
+        <th>Item</th>
+        <th>Date</th>
+        <th>Total</th>
+        <th>Commission</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let d of data.salespersonSales">
+        <td>{{ d.id }}</td>
+        <td>{{ d.product.name }}</td>
+        <td>{{ d.transactionDate }}</td>
+        <td>${{ d.product.salePrice }}</td>
+        <td>%{{ d.product.commission }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </mat-form-field>
+
+  <div class="row">
+    <div class="col-6" style="text-align: left">
+      <div class="form-group">
+        <label style="color: black;font-weight: bold;font-size: x-large"> Total Commission: ${{totalCommission}}</label>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">OK !</button>
+</div>

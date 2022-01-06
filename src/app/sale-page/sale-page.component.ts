@@ -6,6 +6,7 @@ import {SpecialDiscountService} from "../services/special-discount-service";
 import {DashboardService} from "../services/dashboard-service";
 import {SaleModel} from "../../assets/models/saleModel";
 import {CustomerModel} from "../../assets/models/customerModel";
+import {NotificationService} from "../services/notification/notification.service";
 
 @Component({
   selector: 'app-sale-page',
@@ -23,7 +24,7 @@ export class SalePageComponent implements OnInit {
 
   saleModel: SaleModel = new SaleModel();
 
-  constructor(private formBuilder: FormBuilder,  private dashboardService: DashboardService, private productService: ProductService, private specialDiscountService: SpecialDiscountService, private salespersonService: SalespersonService) {
+  constructor(private formBuilder: FormBuilder, private notifyService: NotificationService, private dashboardService: DashboardService, private productService: ProductService, private specialDiscountService: SpecialDiscountService, private salespersonService: SalespersonService) {
   }
 
   ngOnInit(): void {
@@ -50,15 +51,17 @@ export class SalePageComponent implements OnInit {
     let c = new CustomerModel();
 //  c.customerId
     c.firstName = formData.customername;c.lastName = formData.lastname;c.phoneNumber = formData.phonenumber;
-//    c.registered = null;
+//  c.registered = null;
     c.active = true;this.saleModel.customer = c;
     // @ts-ignore
     this.saleModel.product.discounts=undefined;
 
     this.dashboardService.makeASale(this.saleModel).subscribe(data => {
       console.log(data);
+      this.notifyService.showSuccess("Product Updated", "")
     })
     console.log(this.saleModel);
+    this.createSaleForm.reset();
   }
 
   onChangeProduct(event: any) {

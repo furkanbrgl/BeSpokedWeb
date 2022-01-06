@@ -44,4 +44,16 @@ export class DashboardService {
       );
   }
 
+  getSalesBySalesmanId(salespersonId: any, complete = () => {
+  }): Observable<any> {
+    let requestURL = "http://localhost:8080/sales/salespersonId/" + salespersonId
+    return this.http.get<SalesDTO>(requestURL, httpOptions)
+      .pipe(
+        map((data: any) => {
+          let sales = new SalesDTO();
+          sales = data;
+          return sales;
+        }));
+  }
+
 }
